@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Custom Fonts -->
+  <style>
+    @font-face {
+      font-family: 'TanPearl';
+      src: url('fonnts.com-tan-pearl.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flappy Bat Portal</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(#02010a, #0b0f33, #1a214f);
+      color: #eee;
+      overflow-x: hidden;
+    }
+    header {
+      text-align: center;
+      padding: 40px 20px;
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      font-family: 'TanPearl', 'Montserrat', sans-serif;
+      letter-spacing: 1px;
+    }
+    p {
+      font-size: 1.2rem;
+      opacity: 0.85;
+    }
+    .star-container span {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: white;
+      border-radius: 50%;
+      animation: twinkle 2s infinite ease-in-out;
+    }
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 1; }
+    }
+    .embed-container {
+      position: relative;
+      padding-top: 56.25%;
+      margin: 40px auto;
+      width: 90%;
+      max-width: 900px;
+      border: 3px solid #4f5b93;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.6);
+      overflow: hidden;
+    }
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Flappy Bat</h1>
+    <p>Fly, dodge, survive! <br>
+Created on Scratch and summoned here through the technological marvel that is embedding.<br>
+Hope you enjoy ;)<br>
+P.S. The green flag is for restart-<br>
+(Riddhi Agnihotri 23BCG10020)</p>
+
+  </header>
+
+  <!-- Night sky stars -->
+  <div class="star-container">
+    <script>
+      for (let i = 0; i < 80; i++) {
+        const star = document.createElement('span');
+        star.style.top = Math.random() * 100 + 'vh';
+        star.style.left = Math.random() * 100 + 'vw';
+        star.style.animationDelay = Math.random() * 2 + 's';
+        document.body.appendChild(star);
+      }
+    </script>
+  </div>
+
+  <!-- SCRATCH EMBED GOES HERE -->
+  <div class="embed-container">
+    <iframe 
+      src="https://scratch.mit.edu/projects/1250544206/embed"
+      allowtransparency="true"
+      allowfullscreen
+      scrolling="no">
+    </iframe>
+  </div>
+
+  <footer style="text-align:center; padding:20px; color:#ccc; font-family: 'Orbitron', sans-serif; font-size:1rem; opacity:0.8;">
+    Made by Riddhi Agnihotri
+  </footer>
+
+</body>
+</html>
